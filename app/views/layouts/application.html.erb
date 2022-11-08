@@ -12,11 +12,16 @@
   </head>
 
   <body>
+  <%= render partial: "shared/navbar" %>
+  <div class="container">
+
   <%if notice %><p class="notice alert alert-success"><%= notice %></p> <%end%>
   <%if alert %> <p class="alert alert alert-danger"><%= alert %></p> <%end%>
-  <%if user_signed_in? %>
-    <%=button_to "Sign out", destroy_user_session_path, method: :delete,  class:"btn btn-danger text-white m-2"%>
-  <%end%>
-    <%= yield %>
+
+  <%= yield %>
+
+  </div>
+
   </body>
+
 </html>
