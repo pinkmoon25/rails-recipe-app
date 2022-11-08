@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center justify-content-center">
+  <ul class="w-50 m-0">
+    <%@recipes.each do |recipe| %>
+      <li class="d-flex justify-content-between bg-info mb-2 p-3">
+        <div>
+          <h2><%= link_to recipe.name, recipe_path(recipe.id) %></h2>
+          <%= button_to "remove", recipe_path(recipe.id), method: :delete, class:'btn btn-danger' %>
+        </div>
+        <p><%= recipe.description%> </p>
+      </li>
+    <%end%>
+  </ul>
+</div>

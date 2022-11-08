@@ -1,0 +1,20 @@
+<section>
+  <h1>Create a new Recipe</h1>
+
+  <%= form_with model: @recipe, url: recipes_path, method: :post, local: true do |f|%>
+    <%= f.label :name , "Recipe name", class:'form-label'%>
+    <%= f.text_field :name, class:'form-control'%>
+    <%= f.label :preparation_time, "Praparation Time", class:'form-label'%>
+    <%= f.text_field :preparation_time, class:'form-control' %>
+    <%= f.label :cooking_time, "Cooking Time", class:'form-label' %>
+    <%= f.text_field :cooking_time, class:'form-control'%>
+    <%= f.label :description, "description", class:'form-label' %>
+    <%= f.text_field :description, class:'form-control'%>
+    <%= f.label :public, class:'form-label' %>
+    <%= f.radio_button :public, true %>
+    <%= f.label :public, "yes", value: true%>
+    <%= f.radio_button :public, false%>
+    <%= f.label :public, "No", value: false%>
+    <%= f.submit %>
+  <%end%>
+</section>
