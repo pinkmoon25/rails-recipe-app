@@ -21,16 +21,15 @@
       </ul>
     <% else %>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Public Recipes</a>
-      </li>
-      <li class="nav-item active">
       <%=link_to "Sign In", new_user_session_path, class:"btn btn-primary" %>
       </li>
       <li class="nav-item active">
       <%=link_to "Sign Up", new_user_registration_path, class:"btn btn-secondary mx-2" %>
       </li>
       <% end %>
-
+    <li class="nav-item active">
+        <%=link_to "Public Recipes", public_recipes_path, class:"btn btn-warning text-white mx-2" %>
+    </li>
     </ul>
   </div>
 </nav>
