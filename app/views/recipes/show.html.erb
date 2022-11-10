@@ -9,7 +9,7 @@
 <% if user_signed_in?%>
 <div class='w-100 d-flex justify-content-around'>
   <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe.id), class:'btn btn-primary text-white'%>
-  <%= link_to 'Generate shopping list', new_recipe_recipe_food_path(@recipe.id), class:'btn btn-secondary text-white'%>  
+  <%= link_to 'Generate shopping list', shopping_lists_path, class:'btn btn-info text-white'%>  
 </div>
 <%end%>
 <table class="table w-50 m-auto">
