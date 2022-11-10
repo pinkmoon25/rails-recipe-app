@@ -28,7 +28,7 @@
       <%@quantity = RecipeFood.find_by(food_id: food.id).quantity%>
       <td> <%= @quantity %> </td>
       <td> <%= food.price * @quantity %> </td>
-      <% if !current_user.nil? && current_user.id == recipe.user_id%>
+      <% if !current_user.nil? && current_user.id == @recipe.user_id%>
       <td> <%= button_to "remove", recipe_recipe_food_path(@recipe.id, food.id), method: :delete, class:'btn btn-danger'%>
       <%end%>
       </td>
