@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
   resources :foods, except: :update
   resources :public_recipes, only: :index
+  resources :shopping_lists, only: :index
 end
