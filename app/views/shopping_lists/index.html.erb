@@ -1,0 +1,9 @@
+<h1>Shopping list </h1>
+
+<ul>
+  <%@food_list.each do |f|%>
+  <li>name: <%=f[:name]%></li>
+  <li>name: <%=f[:quantity] * -1%></li>
+  <li>name: <%=f[:price] * -1%></li>
+  <%end%>
+<ul>
