@@ -1,9 +1,27 @@
-<h1>Shopping list </h1>
+<h1 class="text-center m-5">Shopping list 🛒</h1>
 
-<ul>
+<div class="d-flex justify-content-around m-5">
+  <h5>Amount of Food Items to buy: <span><%= @food_list.size %></span> </h5>
+  <h5>Total Value of Food Needed: <span></span> </h5>
+</div>
+
+<table class="table w-50 m-auto">
+  <thead>
+    <tr>
+      <th scope="col"> Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+
   <%@food_list.each do |f|%>
-  <li>name: <%=f[:name]%></li>
-  <li>name: <%=f[:quantity] * -1%></li>
-  <li>name: <%=f[:price] * -1%></li>
-  <%end%>
-<ul>
+    <tr>
+      <td> <%=f[:name]%> </td>
+      <td> <%=f[:quantity] * -1%></td>
+      <td> $<%=f[:price] * -1%></td>
+      </td>
+      </tr>
+      <%end%>
+  </tbody>
+</table>
