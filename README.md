@@ -11,6 +11,8 @@ To get a local copy up and running follow these simple example steps.
 - Go to the repository folder in your command prompt `cd rails-recipe-app`.
 - Run `rails s` or `rails server` to start.
 
+## Heroku deployment  https://radiant-citadel-75284.herokuapp.com/
+
 ## Authors
 
 | 👤 Name | Github | Twitter | LinkedIn |
