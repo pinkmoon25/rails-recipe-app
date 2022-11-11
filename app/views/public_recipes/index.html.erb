@@ -1,0 +1,21 @@
+<h1 class="text-center m-5">Public Recipies 👩‍🍳 </h1>
+
+<div class="d-flex align-items-center justify-content-center">
+  <ul class="w-50 m-0">
+    <% @recipes.each do |recipe| %>
+      <li class="d-flex justify-content-between bg-light mb-2 p-3">
+        <div>
+          <h2><%= link_to recipe.name, recipe_path(recipe.id) %></h2>
+          <h4>By: <%= recipe.user.name %></h4>
+        </div>
+        <div>
+          <p>Total food Items: <%=recipe.foods.size%></p>
+          <p>Total price: <%=recipe.foods.all.sum(:price)%>
+        </div>
+          <% if !current_user.nil? && current_user.id == recipe.user_id%>
+          <%= button_to "remove", recipe_path(recipe.id), method: :delete, class:'btn btn-danger' %>
+          <%end%>
+      </li>
+    <%end%>
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<h1 class="text-center m-5">Recipies 👩‍🍳 </h1>
+<div class='d-flex justify-content-end w-75'>
+  <%= link_to 'Add recipe', new_recipe_path, class:'btn btn-primary my-2' %>
+</div>
+<div class="d-flex align-items-center justify-content-center">
+  <ul class="w-50 m-0">
+    <% @recipes.each do |recipe| %>
+      <li class="d-flex justify-content-between bg-light mb-2 p-3">
+        <div>
+          <h2><%= link_to recipe.name, recipe_path(recipe.id) %></h2>
+          <%= button_to "remove", recipe_path(recipe.id), method: :delete, class:'btn btn-danger' %>
+        </div>
+        <p><%= recipe.description%> </p>
+      </li>
+    <%end%>
+  </ul>
+</div>

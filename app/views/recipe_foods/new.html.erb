@@ -1,0 +1,8 @@
+<section>
+  <%= form_with model: @recipe_food, url: recipe_recipe_foods_path(params[:recipe_id]), method: :post, local: true do |f|%>
+    <%= f.select :food_id, current_user.foods.all.map {|f| [f.name, f.id]} %>
+    <%= f.label :quantity, "Quantity", class:'form-label' %>
+    <%= f.number_field :quantity, class:'form-control'%>
+    <%= f.submit "Add food" %>
+  <%end%>
+</section>

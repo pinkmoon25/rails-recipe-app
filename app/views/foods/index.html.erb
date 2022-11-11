@@ -1,0 +1,29 @@
+<h1 class="text-center m-5">Foods 🍔 </h1>
+
+<div class="d-flex w-75 justify-content-end my-2"> 
+ <%= link_to "Add Food", new_food_path, class:"btn btn-primary text-white m-2" %>
+</div>
+
+<table class="table w-50 m-auto">
+  <thead>
+    <tr>
+      <th scope="col"> Food</th>
+      <th scope="col">Measurement Unit</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @foods.each do |food| %>
+    <tr>
+      <td> <%= food.name%> </td>
+      <td> <%= food.measurement_unit%> </td>
+      <td> <%= food.price%> </td>
+      <td> <%= food.quantity%> </td>
+      <td> <%= button_to "remove", food_path(food.id), method: :delete, class:'btn btn-danger'%>
+      </td>
+      </tr>
+      <%end%>
+  </tbody>
+</table>
