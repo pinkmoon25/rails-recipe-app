@@ -1,5 +1,13 @@
-# Recipe App
-> The Recipe App is created on rails it keeps track of your recipe and the ingredients that needs by it it will also generate a shopping list automatically considering what products are short for the recipes to get prepared ;)
+### Recipe App 🍽️
+
+A Ruby on Rails application designed to manage and track your recipes and their ingredients. The app automatically generates a shopping list based on the ingredients you’re short on, ensuring you always have what you need to prepare your favorite dishes.
+
+### Features:
+- Track and manage recipes and their ingredients
+- Automatically generate a shopping list based on missing ingredients
+- User-friendly interface for efficient recipe management
+
+---
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
